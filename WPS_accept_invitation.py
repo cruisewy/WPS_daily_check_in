@@ -1,4 +1,4 @@
-invite_userids = [244668941]
+invite_userids = [341348182]
 
 import json, os, time
 import requests
@@ -26,7 +26,7 @@ def request_re(sid, invite_userid, rep = 30):
     js = json.loads(r.content)
     if js['msg'] == 'tryLater' and rep > 0:
         rep -= 1
-        time.sleep(2)
+        time.sleep(5)
         r = request_re(sid, invite_userid, rep)
     return r
 
